@@ -124,10 +124,12 @@ You now have changed some files and uploaded them to your remote repository. In 
 
 Access your account on github and go to your fork of the class repository. There you will see a button that allows you to create a pull request:
 
--- Add pull request image
+![Alt text](SupportFiles/pullrequest1.png?raw=true "PullRequest1")
 
 Then you have to again write a name for the pull request and a description of what you did, and why you want it included in the repository you are making the pull request to.
 
--- Add pull request image 1
+![Alt text](SupportFiles/pullrequest2.png?raw=true "PullRequest2")
 
 Thats it you have now created a pull request and it is now up to the maintainer of the repostory to **merge** your changes into it.
+
+![Alt text](SupportFiles/pullrequest3.png?raw=true "PullRequest3")
