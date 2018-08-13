@@ -26,8 +26,7 @@ Branches are used to develop features isolated from each other. The `master` bra
 
 # Working with files Commits, pushes, etc...
 
-When working with files on a git repository, any changes you make are tracked, but they are not automatically uploaded to the remote repository. Uploading the changes is called a **Push
-**.
+When working with files on a git repository, any changes you make are tracked, but they are not automatically uploaded to the remote repository. Uploading the changes is called a **push**.
 
 When you change a file the changes are tracked, so in order for git to know that you want to keep the changes you made, you have to **commit** the changes. When you commit these changes you also have the opportunity to write a message stating what the changes are for, or why they were made.
 
@@ -43,8 +42,8 @@ nothing to commit, working tree clean
 Or if there are changes to the files but that have not yet been commited:
 
 ```
-On branch master
-Your branch is up to date with 'origin/master'.
+On branch GitTutorial
+Your branch is up to date with 'origin/GitTutorial'.
 
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
@@ -62,8 +61,8 @@ In the example above the file `README.md` has been changed but the changes have 
 Once you add the files and check the status again you will see that git now tells you there are files waiting to be commited:
 
 ```
-On branch master
-Your branch is up to date with 'origin/master'.
+On branch GitTutorial
+Your branch is up to date with 'origin/GitTutorial'.
 
 Changes to be committed:
   (use "git reset HEAD <file>..." to unstage)
@@ -74,40 +73,22 @@ Changes to be committed:
 You are now ready to commit the files, this will add (save the changes) them to your local repository. When you do this it is good practice to write a note of what you changed and why:
 
 ```
-[~/IntroToRoboticsAug18] (master) $ git commit
-
-Updated README.md file with examples and instructions.
-
-# Please enter the commit message for your changes. Lines starting
-# with '#' will be ignored, and an empty message aborts the commit.
-#
-# On branch master
-# Your branch is up to date with 'origin/master'.
-#
-# Changes to be committed:
-#       modified:   README.md
-#
-~                                                                                                                                                
-~                                                                                                                                                
-~                                                                                                                                                
-~                                                                                                                                                
-~                                                                                                                                                
-~                                                                                                                                                
-~       
--- INSERT --
-
-[~/IntroToRoboticsAug18] (master) $ git commit
-[master 50da365] Updated README.md file with examples and instructions.
- 1 file changed, 18 insertions(+), 1 deletion(-)
-[~/IntroToRoboticsAug18] (master) $                                   
+git commit -m 'Added branch creation instructions'
 ```
-In the above example after using the `git commit` command, a text editor, in this case **vim** opens here you have to input the text you want to add to the commit. For more information on how to use **vim** you can follow this tutorial https://www.openvim.com.
+
+In the above example the **-m** is used to append the message text. If you don't use that, then after using the `git commit` command, a text editor will open. In this case **vim** will most likely open, here you have to input the text you want to add to the commit. For more information on how to use **vim** you can follow this tutorial https://www.openvim.com.
+
+You will see a similar output to this:
+```
+[GitTutorial 12de098] Added branch creation instructions
+ 1 file changed, 106 insertions(+), 1 deletion(-)
+```
 
 Once your changes are commited on your local repository then you have the option of pushing the changes to your remote GitHub repository. If we check the status now you will see the following:
 
 ```
-On branch master
-Your branch is ahead of 'origin/master' by 1 commit.
+On branch GitTutorial
+Your branch is ahead of 'origin/GitTutorial' by 1 commit.
   (use "git push" to publish your local commits)
 
 nothing to commit, working tree clean
@@ -121,17 +102,32 @@ you should see something like this:
 Counting objects: 3, done.
 Delta compression using up to 8 threads.
 Compressing objects: 100% (3/3), done.
-Writing objects: 100% (3/3), 1.15 KiB | 1.15 MiB/s, done.
-Total 3 (delta 0), reused 0 (delta 0)
+Writing objects: 100% (3/3), 474 bytes | 474.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
 To https://github.com/jmachuca77/IntroToRoboticsAug18.git
-   37284a2..50da365  master -> master
+   12de098..ed4b7cf  GitTutorial -> GitTutorial
 ```
 
 This means that your changes have been pushed to the remote Repository. Check the status now and you will see that your local repository is up to date with the remote.
 
 ```
-On branch master
-Your branch is up to date with 'origin/master'.
+On branch GitTutorial
+Your branch is up to date with 'origin/GitTutorial'.
 
 nothing to commit, working tree clean
 ```
+
+# Creating a Pull Request
+
+You now have changed some files and uploaded them to your remote repository. In order to contribute your changes back to the class repository you have to create what is called a **pull request**. You will do this on the GitHub web page.
+
+Access your account on github and go to your fork of the class repository. There you will see a button that allows you to create a pull request:
+
+-- Add pull request image
+
+Then you have to again write a name for the pull request and a description of what you did, and why you want it included in the repository you are making the pull request to.
+
+-- Add pull request image 1
+
+Thats it you have now created a pull request and it is now up to the maintainer of the repostory to **merge** your changes into it.
