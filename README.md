@@ -14,14 +14,15 @@ It is organized into folders for each student where each should contribute the a
 
 # Creating a new Branch
 
-Branches are used to develop features isolated from each other. The `master` branch is the main branch when you create a repository. Create branches to work on changes and when ready merge them back to the `master` branch.
+Branches are used to develop features isolated from each other. The `master` branch is the main branch when you create a repository. Create branches to work on changes and when ready merge them back to the `master` branch. The following are useful commands when working with branches.
 
 1. To create a new branch `git checkout -b branch_name` This creates a new branch and switched to it.
 2. To go back to the `master` branch, `git checkout master`
 3. If you want to change to an existing branch `git checkout branch_name`
 4. To delete a branch `git branch -d branch_name`
-5. To upload (push) a branch to a remote repository `git push remote_name branch_name`
-6. To check what branch you are currently working on `git branch`
+5. To upload (push) a new branch and set your local branch to track it `git push --set-upstream remote_name branch_name`
+6. To upload (push) a branch to a remote repository `git push remote_name branch_name`
+7. To check what branch you are currently working on `git branch`
 
 # Working with files Commits, pushes, etc...
 
@@ -33,8 +34,8 @@ When you change a file the changes are tracked, so in order for git to know that
 You can check what the status of your repository is by using this command `git status`. This will tell you if your folder is in sync with the remote repository:
 
 ```
-On branch master
-Your branch is up to date with 'origin/master'.
+On branch GitTutorial
+Your branch is up to date with 'origin/GitTutorial'.
 
 nothing to commit, working tree clean
 ```
