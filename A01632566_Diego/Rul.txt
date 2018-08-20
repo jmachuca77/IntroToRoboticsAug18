@@ -1,0 +1,7 @@
+Diego Gonzalez RUl VILLA A01632566
+
+
+git config --global user.email "you@example.com"
+
+mv IntroToRoboticsAug18/ tuhermana
+git remote add upstream https://github.com/jmachuca77/IntroToRoboticsAug18.git
