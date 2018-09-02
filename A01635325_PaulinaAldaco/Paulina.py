@@ -62,16 +62,16 @@ def executeMission(vehicle):
     vehicle.airspeed = 10
     #changes the airspeed to 10 m/s
 
-    waypoint = LocationGlobalRelative(20.736177,-103.456495,10)
+    waypoint1 = LocationGlobalRelative(20.736177,-103.456495,10)
     waypoint2 = LocationGlobalRelative(20.735818,-103.456495,10)
     waypoint3 = LocationGlobalRelative(20.735818,-103.456136,10)
     waypoint4 = LocationGlobalRelative(20.736177,-103.456136,10)
-    #assigns a location to waypoint, waypoint2, waypoint3, and waypoint4
+    #assigns a location to waypoint1, waypoint2, waypoint3, and waypoint4
     
-    vehicle.simple_goto(waypoint)
-    #moves the drone to waypoint
+    vehicle.simple_goto(waypoint1)
+    #moves the drone to waypoint1
     time.sleep(14)
-    #waits 18 seconds
+    #waits 14 seconds
 
     vehicle.simple_goto(waypoint2)
     time.sleep(14)
