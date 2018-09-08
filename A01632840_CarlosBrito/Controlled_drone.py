@@ -83,7 +83,7 @@ def main():
  
     # Read the keyboard with tkinter
     root = tk.Tk()
-    print(">> Control the drone with the arrow keys. Press r for RTL mode")
+    print(">> Control the drone with the arrow keys. Press r for RTL mode. Press L for LAND mode")
     root.bind_all('<Key>', key) 
     root.mainloop() 
 
