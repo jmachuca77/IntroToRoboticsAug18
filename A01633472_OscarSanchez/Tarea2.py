@@ -1,8 +1,9 @@
+#************************************************************************************************************************************************************************************************************************#
 # Commands that have to be include in the terminal:
-#  Importing Tkinter:                                                   sudo apt-get install python-tk
-#  Set the drone in campus:                                         -   sitl copter --home=20.736334,-103.456695,130,312
-#  Connect the drone with mavproxy through the terminal                 mavproxy.py --master tcp:localhost:5760 --out udp:localhost:14551
-#The programm has the extra credit of the landing point de la linea 82 a 84
+# Importing Tkinter:                                                   sudo apt-get install python-tk
+# Set the drone in campus:                                         -   sitl copter --home=20.736334,-103.456695,130,312
+# Connect the drone with mavproxy through the terminal                 mavproxy.py --master tcp:localhost:5760 --out udp:localhost:14551
+#The programm has the extra credit of the landing point in the line 82 a 84
 
 #Here we are importing connect, VehicleMode, LocationGlobalRelativa, Command and LocationGlobal from dronekit
 #Also we are importing time and Tkinter for reading keyboard events
@@ -71,7 +72,7 @@ def set_velocity_body(vehicle, vx, vy, vz):
     vehicle.flush()
 
 #************************************************************************************************************************************************************************************************************************#
-#The function key works as a callback function. We are setting some instructions when the the letter r and l are pressed to set the vehicle.mode to LAND OR RTL according to the letter pressed
+#We are setting some instructions when the the letter r and l are pressed to set the vehicle.mode to LAND OR RTL according to the letter pressed
 #Also we are delcaring that the velocity to 5 m/s 
 #When the key pressed is up or down or left or right we are setting the velocity in the axes x and y  
 def key(event):
@@ -102,7 +103,7 @@ def main ():
     arm_and_takeoff(vehicle, 10)
 
     root = tk.Tk()
-    print(">> Control the drone with the arrow keys. Press r for RTL mode")
+    print(">> Control the drone with the arrow keys. Press r for RTL mode and press l for LAND mode)
     root.bind_all('<Key>', key)
     root.mainloop()
 
