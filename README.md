@@ -126,7 +126,7 @@ Access your account on github and go to your fork of the class repository. There
 
 ![Alt text](SupportFiles/pullrequest1.png?raw=true "PullRequest1")
 
-Then you have to again write a name for the pull request and a description of what you did, and why you want it included in the repository you are making the pull request to.
+Then you have to again write a name for the pull request and a description of what you did, and why you want it included in the repository you are making the pull request to. **For turning in the assingments make sure the repository you are making the pull request to is jmachuca77/IntroToRoboticsAug18, and the branch is the master branch.**
 
 ![Alt text](SupportFiles/pullrequest2.png?raw=true "PullRequest2")
 
