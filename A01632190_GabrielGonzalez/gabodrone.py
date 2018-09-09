@@ -59,4 +59,4 @@ def main(): #This part defines the main process and compiles the previous define
 
 
 if __name__=='__main__':
-    main() #This stablishes that yoou can callthis process in another programming session.
+    main() #This stablishes that yoou can call this process in another programming session.
