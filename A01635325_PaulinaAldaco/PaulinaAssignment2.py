@@ -51,6 +51,7 @@ def key(event):
         elif event.keysym == 'l':
             vehicle.mode = VehicleMode('LAND')
             print('land mode')
+        #extra credit
     else: #-- non standard keys
         if event.keysym == 'Up':
             set_velocity_body(vehicle,5,0,0)
@@ -66,6 +67,7 @@ def key(event):
             print('right')
 #this function checks what key is being pressed
 #depending on the key calls the set_velocity_body function with a certain value 
+
 
 if __name__ == '__main__':
     main()
