@@ -20,8 +20,7 @@ def arm_and_takeoff(vehicle, TargetAltitude):
         print("waiting for arming...")
         time.sleep(1)
 
-        print("warning taking off")
-
+    print("warning taking off")
     vehicle.simple_takeoff(TargetAltitude)
 
     while True:
@@ -61,8 +60,9 @@ def makemission(vehicle):
     
 
 def batterystatus(vehicle):
-    vehicle.battery
-    print("Battery Voltage: 13.5 v")
+    print ("battery: %f v" % vehicle.battery.voltage)
+    
+    
 
 def main():
     
@@ -71,6 +71,10 @@ def main():
     arm_and_takeoff(vehicle, 10)
     makemission(vehicle)
     vehicle.mode = VehicleMode("LAND")
+    print("Landing")
+    time.sleep(23)
+    print("Landed")
+    time.sleep(2)
     batterystatus(vehicle)
 
 
