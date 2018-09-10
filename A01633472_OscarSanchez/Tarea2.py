@@ -103,7 +103,7 @@ def main ():
     arm_and_takeoff(vehicle, 10)
 
     root = tk.Tk()
-    print(">> Control the drone with the arrow keys. Press r for RTL mode and press l for LAND mode)
+    print(">> Control the drone with the arrow keys. Press r for RTL mode and press l for LAND mode")
     root.bind_all('<Key>', key)
     root.mainloop()
 

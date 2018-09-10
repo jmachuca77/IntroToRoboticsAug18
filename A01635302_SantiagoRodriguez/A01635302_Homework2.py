@@ -52,10 +52,11 @@ def set_velocity_body(vehicle, vx, vy, vz): #This will define the function that 
     vehicle.flush()
 
 def key(event):     #This function will tell the drone when to move where.
-    
-    vehicle = connect("udp:localhost:14551",wait_ready=True)       #Vehicle must be defined once more
+    #Multple connection events cause a flyaway!
+    #vehicle = connect("udp:localhost:14551",wait_ready=True)       #Vehicle must be defined once more
 
-    while True:
+    #Creates an infinite loop and stays flying in the direction it starts for ever
+    #while True:
 
         if event.char == event.keysym:  #This will tell if the value of keysym is a character or not.
 
@@ -85,7 +86,8 @@ def key(event):     #This function will tell the drone when to move where.
                 set_velocity_body(vehicle, 0, 5, 0)
                 
 def main():     #This will define the main function, in here we'll execute most of the code.
-
+    #Multple connection events cause a flyaway!
+    global vehicle
     vehicle = connect("udp:localhost:14551",wait_ready=True)    #This will connect the drone & wait until it's ready
     
     Takeoff_procedure(vehicle, 10)   #This calls the Takeoff_procedure, in this case, it'll hover up to 10 m.

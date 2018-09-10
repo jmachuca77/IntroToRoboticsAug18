@@ -6,8 +6,8 @@ from pymavlink import mavutil
 import subprocess
 
 #This line code calls the console to execute the mavproxy and connect to dronekit
-subprocess.call("mavproxy.py --master tcp:127.0.0.1:5760 --out udp:localhost:14551", shell=True)
-time.sleep(15)
+#subprocess.call("mavproxy.py --master tcp:127.0.0.1:5760 --out udp:localhost:14551", shell=True)
+#time.sleep(15)
 
 vehicle = connect("udp:localhost:14551", wait_ready=True)
 

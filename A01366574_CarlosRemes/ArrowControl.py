@@ -55,14 +55,11 @@ def set_velocity_body(vehicle, vx, vy, vz):
 
 
 
-def key(vehicle,event):
+def key(event):
     if event.char == event.keysym: 
         if event.keysym == 'r':
             vehicle.mode = VehicleMode("RTL") #RTL is return to llanding which is really convenient
-                
-            
-    else: 
-        if event.keysym == 'w':
+        elif event.keysym == 'w':
             set_velocity_body(vehicle,5,0,0)
         elif event.keysym == 's':
             set_velocity_body(vehicle,-5,0,0)
@@ -70,6 +67,7 @@ def key(vehicle,event):
             set_velocity_body(vehicle,0,-5,0)
         elif event.keysym == 'd':
             set_velocity_body(vehicle,0,5,0)
+                
 
 
 def control(vehicle):
@@ -80,6 +78,7 @@ def control(vehicle):
 
 
 def main():
+    global vehicle
     vehicle = connect("udp:localhost:14551",wait_ready=True)
     arm_and_takeoff(vehicle,10)
     control(vehicle)

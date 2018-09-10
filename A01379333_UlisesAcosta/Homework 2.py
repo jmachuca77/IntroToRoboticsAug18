@@ -63,13 +63,13 @@ def key(event):
          time.sleep(1)
     
     else: 
-        if event.keysym == 'up':
+        if event.keysym == 'Up':
            set_velocity(vehicle,5,0,0)
-        elif event.keysym == 'down':
+        elif event.keysym == 'Down':
            set_velocity(vehicle,-5,0,0)
-        elif event.keysym == 'right':
+        elif event.keysym == 'Right':
            set_velocity(vehicle,0,5,0)
-        elif event.keysym == 'left':
+        elif event.keysym == 'Left':
            set_velocity(vehicle,0,-5,0)
 
 
